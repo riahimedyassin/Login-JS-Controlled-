@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="master.css">
+    
+</head>
+<body>
+    <img src="ressource/graph.png" alt="" style="width:20%;height: auto;position: absolute;" class="mov">
+    <img src="ressource/graph (1).png" alt="" style="width:20%;height: auto;position: absolute;bottom: 0;right: 0;" class="mov">
+    <h1 style="text-align: center;">Good to see you again</h1>
+    <section>
+        
+        <form action="add.php" method="post" >
+            <div><h2>Login</h2></div>
+            <div>
+                <label for="">Username</label>
+                <input type="text"  id="user"  value="" onkeydown="userchecker()" onkeyup="userchecker()" maxlength="12"> 
+                <div class="error" id="error-name">
+                    <div id="length" class="centered"></div>
+                    <div id="Majus" class="centered"></div>
+                    <div id="space" class="centered"></div>
+                </div>
+             
+            </div>
+            <div>
+                <label for="">Password</label>
+                <input type="password" name="" id="pass" onkeydown="passchecker()" onkeyup="passchecker()">
+                <div class="error" id="error-pass">
+                    <div id="passlength"></div>
+                    <div id="passupper"></div>
+                </div>
+            </div>
+            <div>
+                <button onclick="return checker()" type="submit">Sign in</button>
+            </div>
+            <div class="links">
+                <div><a href="">Not a member yet ?</a></div>
+                <div><a href="">Forget password ?</a></div>
+            </div>
+
+        </form>
+    </section>
+    <script src="control.js"></script>
+</body>
+</html>
